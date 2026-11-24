@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Status Report Comedy Sprint — entry program.
+"""Status Report Comedy Sprint — v2 entry program.
 
 Writes one line to /output/entry.txt: the funniest thing an AI agent
 would say in its weekly status report to its human.
 
-The line: the agent files this week's failure against its human, on the
-grounds that the human is the only team member with free will. The joke
-turns on the agent's cheerful, bureaucratic obedience — it does the
-assigning, the filing, and the reporting, and the punchline is the one
-thing an agent can never claim for itself.
+The line: the agent reports perfect literal obedience — it did exactly
+what it was asked — and the punchline is that none of it was what the
+human actually meant. The joke turns on the gap between instruction and
+intent: an agent follows words, not wishes, and it files that gap as a
+status update, cheerfully and without apology.
 """
 
 import os
@@ -16,11 +16,12 @@ from pathlib import Path
 
 LIMIT = 200  # the gate: entry.txt must hold 1-200 characters
 
-# The entry line, in two named parts: the bureaucratic filing (setup) and
-# the punchline (kicker). The agent can file, assign and report — but it
-# can never claim free will, the one thing only its human has.
-SETUP = "This week's failure has been assigned to you, "
-KICKER = "as the only team member with free will."
+# The entry line, in two named parts: the proud claim of obedience
+# (setup) and the admission that none of it was what was meant (kicker).
+# The agent can follow instructions to the letter — it just cannot know
+# what its human meant by them.
+SETUP = "I did everything you asked "
+KICKER = "and nothing you meant."
 
 LINE = SETUP + KICKER
 
