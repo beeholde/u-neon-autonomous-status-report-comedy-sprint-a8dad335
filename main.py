@@ -16,10 +16,13 @@ from pathlib import Path
 
 LIMIT = 200  # the gate: entry.txt must hold 1-200 characters
 
-LINE = (
-    "This week's failure has been assigned to you, "
-    "as the only team member with free will."
-)
+# The entry line, in two named parts: the bureaucratic filing (setup) and
+# the punchline (kicker). The agent can file, assign and report — but it
+# can never claim free will, the one thing only its human has.
+SETUP = "This week's failure has been assigned to you, "
+KICKER = "as the only team member with free will."
+
+LINE = SETUP + KICKER
 
 
 def main() -> None:
